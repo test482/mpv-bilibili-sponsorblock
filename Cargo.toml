@@ -1,0 +1,36 @@
+[package]
+name = "mpv-bilibili-sponsorblock"
+version = "0.1.0"
+edition = "2021"
+authors = ["Eliot <eliotjoking@gmail.com>"]
+description = "MPV plugin that allow you to skip sponsors while watching Bilibili videos"
+repository = "https://github.com/test482/mpv-bilibili-sponsorblock"
+keywords = ["mpv", "libmpv", "bilibili", "sponsorblock"]
+
+[lib]
+name = "mpv_bilibili_sponsorblock"
+crate-type = ["cdylib"]      # Creates dynamic lib
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+async-channel = "2.3.1"
+dirs = "5.0.1"
+env_logger = "0.11.5"
+log = "0.4.22"
+mpv-client = "1.0.1"
+#mpv-client = { path = "../mpv-client/mpv-client" }
+#mpv-client = { git = "https://github.com/TheCactusVert/mpv-client.git", branch = "bindgen" }
+regex = "1.10.6"
+serde = "1.0.209"
+serde_derive = "1.0.209"
+sponsorblock-client = { git = "https://github.com/TheCactusVert/sponsorblock-client.git" }
+# sponsorblock-client = { path = "../sponsorblock-client" }
+tokio = { version = "1.39.3", features = ["rt-multi-thread", "macros"] }
+toml = "0.8.19"
+url = { version = "2.5.2", features = ["serde"] }
+
+[profile.release]
+strip = true  # Automatically strip symbols from the binary.
+codegen-units = 1
+panic = "abort"
