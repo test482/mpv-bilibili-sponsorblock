@@ -1,7 +1,7 @@
 # Server address
 server_address = "https://bsbsb.top"
 # Categories: sponsor, selfpromo, interaction, poi_highlight, intro, outro, preview, music_offtopic, filler, exclusive_access
-categories = ["sponsor","intro"]
+categories = ["sponsor", "intro"]
 # Action types: skip, mute, poi, full
 action_types = ["skip"]
 # Get segments for a video with extra privacy 
