@@ -41,7 +41,7 @@ I don't use Windows. Feel free to make a pull request.
 Copy the exemple configuration file `bilibili-sponsorblock.toml` into your **MPV** folder:
 
 ```bash
-cp ./bilibili-sponsorblock.toml ~/.config/mpv/script-opts/bilibili-sponsorblock.toml
+cp ./bilibili-sponsorblock.toml ~/.config/mpv/bilibili-sponsorblock.toml
 ```
 
 If no configuration file is found, only the sponsors segments will be skipped as specified by the [API](https://github.com/hanydd/BilibiliSponsorBlock/wiki/API).
